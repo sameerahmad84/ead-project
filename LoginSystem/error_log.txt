@@ -1,0 +1,42 @@
+[29/04/2025 11:02:53 pm] Error in UserManagementWindow:
+'Provide value on 'System.Windows.StaticResourceExtension' threw an exception.' Line number '18' and line position '25'.
+Stack Trace:
+   at System.Windows.Markup.XamlReader.RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   at System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   at LoginSystem.UserManagementWindow.InitializeComponent() in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\UserManagementWindow.xaml:line 1
+   at LoginSystem.UserManagementWindow..ctor(User currentUser, Window previousWindow) in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\UserManagementWindow.xaml.cs:line 37
+
+[29/04/2025 11:03:00 pm] Error in btnUsers_Click:
+Cannot set Visibility or call Show, ShowDialog, or WindowInteropHelper.EnsureHandle after a Window has closed.
+Stack Trace:
+   at System.Windows.Window.VerifyCanShow()
+   at System.Windows.Window.Show()
+   at LoginSystem.DashboardWindow.btnUsers_Click(Object sender, RoutedEventArgs e) in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\DashboardWindow.xaml.cs:line 109
+
+[29/04/2025 11:04:41 pm] Error in btnChangePassword_Click:
+'Provide value on 'System.Windows.StaticResourceExtension' threw an exception.' Line number '19' and line position '25'.
+Stack Trace:
+   at System.Windows.Markup.XamlReader.RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   at System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   at LoginSystem.ChangePasswordWindow.InitializeComponent() in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\ChangePasswordWindow.xaml:line 1
+   at LoginSystem.ChangePasswordWindow..ctor(User user, ApplicationDbContext context, Window previousWindow) in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\ChangePasswordWindow.xaml.cs:line 16
+   at LoginSystem.UserManagementWindow.btnChangePassword_Click(Object sender, RoutedEventArgs e) in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\UserManagementWindow.xaml.cs:line 169
+
+[29/04/2025 11:04:46 pm] Error in btnEdit_Click:
+'Provide value on 'System.Windows.StaticResourceExtension' threw an exception.' Line number '19' and line position '25'.
+Stack Trace:
+   at System.Windows.Markup.XamlReader.RewrapException(Exception e, IXamlLineInfo lineInfo, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   at System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   at LoginSystem.AddEditUserWindow.InitializeComponent() in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\AddEditUserWindow.xaml:line 1
+   at LoginSystem.AddEditUserWindow..ctor(User userToEdit, ApplicationDbContext context, Window previousWindow) in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\AddEditUserWindow.xaml.cs:line 19
+   at LoginSystem.UserManagementWindow.btnEdit_Click(Object sender, RoutedEventArgs e) in C:\Users\samee\OneDrive\Desktop\ead\LoginSystem\UserManagementWindow.xaml.cs:line 147
+

@@ -1,0 +1,165 @@
+<Window x:Class="LoginSystem.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dashboard" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#f5f6fa">
+    
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="15,10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="5" 
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#34495e"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DashboardButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3498db"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="15,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="5" 
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Sidebar -->
+        <Grid Width="200" Background="#2c3e50" HorizontalAlignment="Left">
+            <StackPanel Margin="20,40,20,20">
+                <TextBlock Text="EXAM managemnet System" 
+                           Foreground="White" 
+                           FontSize="24" 
+                           FontWeight="Bold" 
+                           Margin="0,0,0,40"/>
+                
+                <Button x:Name="btnStudents" 
+                        Content="Students" 
+                        Click="btnStudents_Click"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="0,0,0,10"/>
+                
+                <Button x:Name="btnExams" 
+                        Content="Exams" 
+                        Click="btnExams_Click"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="0,0,0,10"/>
+                
+                <Button x:Name="btnCourses" 
+                        Content="Courses" 
+                        Click="btnCourses_Click"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="0,0,0,10"/>
+                
+                <Button x:Name="btnSeatingPlan" 
+                        Content="Seating Plan" 
+                        Click="btnSeatingPlan_Click"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="0,0,0,10"/>
+                
+                <Button x:Name="btnUsers" 
+                        Content="Users" 
+                        Click="btnUsers_Click"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Margin="0,0,0,10"/>
+                
+                <Button x:Name="btnLogout" 
+                        Content="Logout" 
+                        Click="btnLogout_Click"
+                        Style="{StaticResource MenuButtonStyle}"
+                        Background="#e74c3c"
+                        Margin="0,40,0,0"/>
+            </StackPanel>
+        </Grid>
+        
+        <!-- Main Content -->
+        <Grid Margin="220,20,20,20">
+            <StackPanel>
+                <TextBlock Text="Welcome to EXAM Management System" 
+                           FontSize="32" 
+                           FontWeight="Bold" 
+                           Margin="0,0,0,20"/>
+                
+                <TextBlock Text="Select an option from the menu to get started." 
+                           FontSize="18" 
+                           Foreground="#7f8c8d"/>
+                
+                <!-- Dashboard Cards -->
+                <WrapPanel Margin="0,40,0,0">
+                    <Border Width="220" Height="150" Background="White" CornerRadius="10" Margin="0,0,20,20" Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="Students" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="Manage student information" Margin="0,10,0,0" Foreground="#7f8c8d"/>
+                            
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Width="220" Height="150" Background="White" CornerRadius="10" Margin="0,0,20,20" Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="Users" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="Manage user information" Margin="0,10,0,0" Foreground="#7f8c8d"/>
+                            
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Width="220" Height="150" Background="White" CornerRadius="10" Margin="0,0,20,20" Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="Exams" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="Schedule and manage exams" Margin="0,10,0,0" Foreground="#7f8c8d"/>
+                            
+                            
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Width="220" Height="150" Background="White" CornerRadius="10" Margin="0,0,20,20" Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="Courses" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="Manage course information" Margin="0,10,0,0" Foreground="#7f8c8d"/>
+                            
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Width="220" Height="150" Background="White" CornerRadius="10" Margin="0,0,20,20" Padding="20">
+                        <StackPanel>
+                            <TextBlock Text="Seating Plan" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Text="Create and manage seating plans" Margin="0,10,0,0" Foreground="#7f8c8d"/>
+                            
+                        </StackPanel>
+                    </Border>
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window> 
