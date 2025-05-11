@@ -120,12 +120,14 @@ namespace LoginSystem
         {
             try
             {
-                // TODO: Navigate to Seating Plan page
-                MessageBox.Show("Seating Plan section - Coming soon!");
+                var coursesWindow = new Views.CoursesWindow(this);
+                this.Hide();
+                coursesWindow.Show();
             }
             catch (Exception ex)
             {
                 LogError(nameof(btnSeatingPlan_Click), ex);
+                this.Show(); // Make sure the dashboard is visible if an error occurs
             }
         }
 
